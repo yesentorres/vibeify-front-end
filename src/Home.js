@@ -11,7 +11,9 @@ function Home() {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const login = () => {    
-    window.open('https://vibeify-back-end.herokuapp.com/', '_self')
+    // http://localhost:5000/
+    // https://vibeify-back-end.herokuapp.com/
+    window.open('http://localhost:5000/', '_self')
   }
 
   return (

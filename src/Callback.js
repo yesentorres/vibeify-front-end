@@ -9,7 +9,9 @@ function Callback() {
   useEffect ( () => {
     // send access code to my flask server 
     const  auth_code = queryString.parse(window.location.search);
-    axios.post('https://vibeify-back-end.herokuapp.com/access', {
+    // http://localhost:5000/access
+    // https://vibeify-back-end.herokuapp.com/access
+    axios.post('http://localhost:5000/access', {
       params : {
         auth_code: auth_code 
       }
