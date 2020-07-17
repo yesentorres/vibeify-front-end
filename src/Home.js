@@ -13,7 +13,7 @@ function Home() {
   const login = () => {    
     // http://localhost:5000/
     // https://vibeify-back-end.herokuapp.com/
-    window.open('http://localhost:5000/', '_self')
+    window.open('https://vibeify-back-end.herokuapp.com/', '_self')
   }
 
   return (

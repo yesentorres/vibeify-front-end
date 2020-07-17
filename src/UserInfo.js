@@ -10,7 +10,7 @@ function UserInfo() {
   useEffect ( () => {
     // http://localhost:5000/user-info
     // https://vibeify-back-end.herokuapp.com/user-info
-    axios.get('http://localhost:5000/user-info')
+    axios.get('https://vibeify-back-end.herokuapp.com/user-info')
     .then( (response) => {
       setUsername(response.data);
       console.log(response);
