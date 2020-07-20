@@ -14,7 +14,7 @@ function VibeForm(props) {
   useEffect ( () => {
     // local: http://localhost:5000/get-genres
     // deployed: https://vibeify-back-end.herokuapp.com/get-genres
-    axios.get('http://localhost:5000/get-genres')
+    axios.get('https://vibeify-back-end.herokuapp.com/get-genres')
     .then( (response) => {
       console.log(response);
 
@@ -38,8 +38,9 @@ function VibeForm(props) {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-
-    axios.post('http://localhost:5000/recommendation-generator', { params: userInput })
+    // local: http://localhost:5000/recommendation-generator
+    // deployed: https://vibeify-back-end.herokuapp.com/recommendation-generator
+    axios.post('https://vibeify-back-end.herokuapp.com/recommendation-generator', { params: userInput })
     .then((response) => {
       console.log(response);
       props.onSubmitCallback(response.data);

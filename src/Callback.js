@@ -14,7 +14,7 @@ function Callback() {
     const  auth_code = queryString.parse(window.location.search);
     // local: http://localhost:5000/access
     // deployed: https://vibeify-back-end.herokuapp.com/access
-    axios.post('http://localhost:5000/access', {
+    axios.post('https://vibeify-back-end.herokuapp.com/access', {
       params : {
         auth_code: auth_code 
       }
