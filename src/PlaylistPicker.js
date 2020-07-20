@@ -6,7 +6,19 @@ import VibeForm from './VibeForm'
 
 function PlaylistPicker() {
 
-  
+  const [playlistGenerated, setPlaylistGenerated] = useState(false);
+  const [playlistUrl, setPlaylistUrl] = useState(null)
+
+  const showPlaylist = (url) => {
+    setPlaylistUrl(url);
+    setPlaylistGenerated(true);
+  }
+
+  const openPlaylist = () => {
+    window.open(`${playlistUrl}`, '_self')
+  }
+
+   console.log(playlistGenerated);
 
   return (
     <div className="playlist-picker">
@@ -14,7 +26,13 @@ function PlaylistPicker() {
       <h3>
         Enter preferences:
       </h3>
-      <VibeForm />
+      {
+        playlistGenerated ?
+        <button onClick={openPlaylist}>Open Playlist in Spotify</button> 
+        :
+        <VibeForm onSubmitCallback={showPlaylist}/>
+      }
+      
     </div>
   );
 }

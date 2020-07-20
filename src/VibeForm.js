@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 
 
-function VibeForm() {
+function VibeForm(props) {
 
   const [userInput, setUserInput] = useState({
     genre_inspiration: ''
@@ -42,6 +42,7 @@ function VibeForm() {
     axios.post('http://localhost:5000/recommendation-generator', { params: userInput })
     .then((response) => {
       console.log(response);
+      props.onSubmitCallback(response.data);
     })
     .catch((error) => {
       console.log(error);
