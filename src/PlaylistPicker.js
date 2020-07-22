@@ -8,6 +8,7 @@ function PlaylistPicker() {
 
   const [playlistGenerated, setPlaylistGenerated] = useState(false);
   const [playlistUrl, setPlaylistUrl] = useState(null)
+  const [reset, setReset] = useState(false);
 
   const showPlaylist = (url) => {
     setPlaylistUrl(url);
@@ -18,7 +19,10 @@ function PlaylistPicker() {
     window.open(`${playlistUrl}`, '_self')
   }
 
-   console.log(playlistGenerated);
+  const resetPlaylist = () => {
+    setPlaylistGenerated(false);
+  }
+
 
   return (
     <div className="playlist-picker">
@@ -28,7 +32,10 @@ function PlaylistPicker() {
       </h3>
       {
         playlistGenerated ?
-        <button onClick={openPlaylist}>Open Playlist in Spotify</button> 
+        <div>
+          <button onClick={openPlaylist}>Open Playlist in Spotify</button> 
+          <button onClick={resetPlaylist}>Reset</button> 
+        </div>
         :
         <VibeForm onSubmitCallback={showPlaylist}/>
       }
