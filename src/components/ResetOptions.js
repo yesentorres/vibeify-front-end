@@ -11,7 +11,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 function ResetOptions(props) {
   const initiateLogout = () => {
-    window.open('http://localhost:3000/', '_self')
+    window.open('https://vibeify.herokuapp.com', '_self')
   }
 
     // Materiul UI Elements Styling 
