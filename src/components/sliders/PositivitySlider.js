@@ -6,15 +6,15 @@ import Slider from '@material-ui/core/Slider';
 const positiveMarks = [
   {
     value: 0,
-    label: 'sad',
+    label: '🙁',
   },
   {
     value: 50,
-    label: 'neutral',
+    label: '😐',
   },
   {
     value: 100,
-    label: 'happy',
+    label: '🤠',
   }
 ];
 

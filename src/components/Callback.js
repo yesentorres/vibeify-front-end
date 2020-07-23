@@ -10,7 +10,7 @@ function Callback() {
 
     // send authorization code to my flask server
     const  authCode = queryString.parse(window.location.search);
-    
+
     axios.post('http://localhost:5000/access', {
       params : {
         auth_code: authCode 
@@ -26,7 +26,7 @@ function Callback() {
 
   return (
     <div className="callback">
-      <Link to="/playlist_picker">Begin Customizing Listening Experience</Link>
+      <Link to="/playlist_picker">Begin Customizing your Listening Experience</Link>
     </div>
   );
 }

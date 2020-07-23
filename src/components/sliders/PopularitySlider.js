@@ -14,7 +14,7 @@ const popularityMarks = [
   },
   {
     value: 100,
-    label: 'radio bops',
+    label: 'heard \'em everywhere',
   }
 ];
 

@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 const danceMarks = [
   {
     value: 0,
-    label: 'i don\'t dance',
+    label: 'no dancing',
   },
   {
     value: 50,

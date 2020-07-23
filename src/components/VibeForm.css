@@ -1,0 +1,22 @@
+/* *{
+  border: 1px solid;
+} */
+
+.vibe-form{
+  margin: auto;
+  width: 50%;
+}
+
+.vibe-form__form-label{
+  font-size: 20px;
+}
+
+.vibe-form__form-button{
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  background-color: #FDE88F;
+}
+
+.vibe-form__form_pref{
+  margin-top: 3rem;
+}
