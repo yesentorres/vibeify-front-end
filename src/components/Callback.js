@@ -11,7 +11,7 @@ function Callback() {
     // send authorization code to my flask server
     const  authCode = queryString.parse(window.location.search);
 
-    axios.post('https://vibeify-back-end/access', {
+    axios.post('https://vibeify-back-end.herokuapp.com/access', {
       params : {
         auth_code: authCode 
       }
