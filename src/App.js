@@ -1,29 +1,22 @@
 import React, { useState } from 'react';
-import './App.css';
-import axios from 'axios';
-import Home from './Home';
-import Callback from './Callback';
+import LoginPage from './components/LoginPage';
+import Callback from './components/Callback';
+import PlaylistPicker from './components/PlaylistPicker';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import PlaylistPicker from './PlaylistPicker';
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-
-
+import './App.css';
 
 function App() {
 
   return (
     <Router>
-    <div className="app">
-      <h1>~ Vibeify ~</h1>
-
+    <div className="app"> 
       <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={LoginPage} />
           <Route path="/callback" component={Callback} />
           <Route path="/playlist_picker" component={PlaylistPicker} />
       </Switch>
     </div>
     </Router>
-
   );
 }
 

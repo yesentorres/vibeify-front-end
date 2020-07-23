@@ -3,18 +3,18 @@ import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 
 // Slider Values 
-const danceMarks = [
+const popularityMarks = [
   {
     value: 0,
-    label: 'i don\'t dance',
+    label: 'hipsters only',
   },
   {
     value: 50,
-    label: 'head boppin\'',
+    label: 'heard \'em somewhere',
   },
   {
     value: 100,
-    label: 'dancing queen',
+    label: 'radio bops',
   }
 ];
 
@@ -35,24 +35,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function DanceabilitySlider(props) {
+export default function PopularitySlider(props) {
   const classes = useStyles();
-  const [danceabilityValue, setDanceabilityValue] = useState(50);
+  const [popularityValue, setPopularityValue] = useState(50);
 
   const handleChange = (event, newValue) => {
-    setDanceabilityValue(newValue);
-    props.sliderChangeCallback('danceability', danceabilityValue);
+    setPopularityValue(newValue);
+    props.sliderChangeCallback('popularity', popularityValue);
   }
 
   return (
     <div className={classes.root}>
       <Slider
-        defaultValue={danceabilityValue}
+        defaultValue={popularityValue}
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider-custom"
         step={10}
         valueLabelDisplay="auto"
-        marks={danceMarks}
+        marks={popularityMarks}
         onChange={handleChange}
       />
     </div>
