@@ -1,12 +1,11 @@
 /* * {
-  border: 3px solid;
+  border: 1px solid;
 } */
 
 html {
   text-align: left;
   height: 100%;
   
-  /* background-color: turquoise; */
   background-image: url("../images/2080886_1919x1152.jpg");
   background-repeat: no-repeat;
   background-size: cover;

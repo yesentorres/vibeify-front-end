@@ -41,7 +41,7 @@ function VibeForm(props) {
   
   useEffect ( () => {
     // load genres
-    axios.get('https://vibeify-back-end.herokuapp.com/get-genres')
+    axios.get('http://localhost:5000/get-genres')
     .then( (response) => {
       console.log(response);
 
@@ -81,7 +81,7 @@ function VibeForm(props) {
     event.preventDefault();
     console.log(`post ${userInput}`)
     // generate playlist
-    axios.post('https://vibeify-back-end.herokuapp.com/recommendation-generator', { params: userInput })
+    axios.post('http://localhost:5000/recommendation-generator', { params: userInput })
     .then((response) => {
       console.log(response);
       props.onSubmitCallback(response.data);

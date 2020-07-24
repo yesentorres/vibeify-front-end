@@ -47,7 +47,7 @@ function PlaylistPicker() {
   }
 
   const initiateLogout = () => {
-    window.open('https://vibeify.herokuapp.com', '_self')
+    window.open('http://localhost:3000', '_self')
   }
 
   // Materiul UI Elements Styling 

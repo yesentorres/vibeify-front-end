@@ -20,7 +20,7 @@ const theme = createMuiTheme({
 function LoginPage() {
 
   const initiateLogin = () => {    
-    window.open('https://vibeify-back-end.herokuapp.com/', '_self')
+    window.open('http://localhost:5000/', '_self')
   }
 
   return (
